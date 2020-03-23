@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 from Todo.models import Task
 from datetime import date,timedelta
 from django.http import HttpResponse
-from .models import Task
 from  django.contrib.auth.models  import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -14,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 
 
 class TodaytaskList(LoginRequiredMixin,ListView):
-    template_name=r'todo\todaytask.html'
+    template_name='Todo\\todaytask.html'
     model=Task
 
  
