@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 
 
 class TodaytaskList(LoginRequiredMixin,ListView):
-    template_name='Todo\\todaytask.html'
+    template_name='Todo//todaytask.html'
     model=Task
 
  
