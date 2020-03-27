@@ -55,6 +55,9 @@ def login_user(request):
 
             messages.error(request,"Invalid Username and Password combination")
             return HttpResponseRedirect(reverse('user:login'))
+    if request.user.username:
+        return HttpResponseRedirect(reverse('Todo:todaytask'))
+
     return render(request,'user/login_form.html')
 
 

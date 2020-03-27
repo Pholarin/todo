@@ -9,7 +9,7 @@
 <!--Main content area-->
 <div class="container">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-lg-8 col-sm-12">
 
       <div class="list-group">
               <button type="button" class="list-group-item list-group-item-action active h3">
@@ -54,14 +54,14 @@
 <br><br>
 
 
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-sm-12">
       <div class="row"> 
           <div class="col-sm-12"> 
 
              
             <div class="list-group" id="uchck">
                 <button type="button" class="list-group-item list-group-item-action active">
-                  Unchecked
+                  Missed Task
                 </button>
                 {%for task in alltask%}
                 {%if task.dateCreated.date < today%}
@@ -76,7 +76,7 @@
 
       </div>
       <br>
-      <div class="row"> 
+     <!-- <div class="row"> 
           <div class="col-sm-12"> 
             <div class="list-group" id="arch">
                 <button type="button"  class="list-group-item list-group-item-action active">
@@ -95,8 +95,8 @@
           </div>
 
       </div>
-
-
+  
+    -->
 
     </div>
   </div>
@@ -126,13 +126,13 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <i class="fas fa-pen prefix grey-text"></i>
-          <input type="text" name="mytask" id="orangeForm-name" class="form-control validate" maxlength="215">
-          <label data-error="wrong" data-success="right" for="orangeForm-name">Task(Max of 215 characters)</label>
+          <input type="text" name="mytask" id="tasktext" class="form-control validate" maxlength="215">
+          <label data-error="wrong" data-success="right" for="tasktext">Task(Max of 215 characters)</label>
         </div>
         <div class="md-form mb-5">
           <i class="fas fa-book prefix grey-text"></i>
-          <input type="text" name="descr" id="orangeForm-name" class="form-control validate" size="30">
-          <label data-error="wrong" data-success="right" for="orangeForm-name">Description (Optional)</label>
+          <input type="text" name="descr" id="taskdscr" class="form-control validate" size="30">
+          <label data-error="wrong" data-success="right" for="taskdscr">Description (Optional)</label>
         </div>
 
        <!-- <div class="md-form mb-4">
@@ -150,7 +150,7 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   function toghide(){
 
     var x= document.getElementById('achv');
@@ -164,4 +164,5 @@
 
 
 </script>
+-->
 {%endblock%}
