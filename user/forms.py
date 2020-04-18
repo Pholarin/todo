@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class SignUpForm(UserCreationForm):
+
+
 	username= forms.CharField(max_length=30)
 	email =forms.EmailField(max_length=200)
 
